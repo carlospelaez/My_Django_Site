@@ -15,8 +15,10 @@
 <body>
     
     <div class="page-header">
+        {% if user.is_authenticated %}
+            <h2><a href="{% url "post_new" %}" class="top-menu"><i class="fa-solid fa-plus"></i></a></h2>
+        {% endif %}
         <h1><a href="{% url "post_list" %}">Charlie BLOG  </a></h1>
-        
         
     </div>
 
